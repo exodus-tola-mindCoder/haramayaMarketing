@@ -18,7 +18,7 @@ if(process.env.NODE_ENV === "production"){
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
   })
 }
-
+console.log("process.env.NODE_ENV", process.env.NODE_ENV);
 app.listen(PORT, () => {
   connectDB(process.env.MONGO_URI); // imported from the db.
   console.log("server started at http://localhost:" + PORT);
